@@ -52,6 +52,9 @@ h1 {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
+  border-radius: 4px;
+  border: 3px solid #F2F3F7;
+
   &__tabs {
     display: flex;
   }
@@ -125,6 +128,9 @@ h1 {
     align-items: center;
     padding: 16px;
     border-top: 3px solid #F2F3F7;
+    &:hover {
+      box-shadow: 0 5px 10px 0 #4444444d;
+    }
     &:nth-child(1) {
       .groups__place {
         background: #28C281;
@@ -147,7 +153,7 @@ h1 {
     height: 24px;
   }
   &__content {
-    min-height: 200px;
+    min-height: 150px;
   }
   &__ratings {
     display: flex;
@@ -191,6 +197,17 @@ h1 {
     font-size: 14px;
     color: #fff;
   }
+}
+
+.more {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  background: #FF6F23;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 .green {

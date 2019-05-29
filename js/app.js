@@ -29,12 +29,10 @@
     }
 
     function createGroup(data) {
-        console.log(data);
         for (let key in data) {
             let arrForSort = [];
             let name = document.querySelector(`.groups__group--${key}`);
             data[key].forEach(function (el, i) {
-                console.log(el);
                 arrForSort.push(el);
                 arrForSort.sort(compareRating);
                 setTimeout(()=> {
