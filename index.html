@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable:0">
+    <title>Турнирная сетка</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Турнирная сетка</h1>
+    <div class="grid">
+        <div class="grid__tabs">
+            <div class="grid__tab active">Закрытые квалификации</div>
+            <div class="grid__tab">Открытые квалификации</div>
+            <div class="grid__tab">Финальная часть</div>
+        </div>
+        <div class="grid__subtabs">
+            <div class="grid__subtab active" data-address="data">
+                Групповой период
+            </div>
+            <div class="grid__subtab" data-address="dif">
+                Переигровки
+            </div>
+            <div class="grid__subtab" data-address="playoff">
+                Плейофф
+            </div>
+            <div class="grid__subtab" data-address="open">
+                OpenAI vs Humans
+            </div>
+            <div class="grid__subtab"  data-address="all">
+                Матч всех звезд
+            </div>
+        </div>
+        <div class="designation">
+            <div class="designation__el">
+                <div class="designation__circle green"></div>
+                <div class="designation__text">Выход в верхнюю сетку плэйофф </div>
+            </div>
+            <div class="designation__el">
+                <div class="designation__circle orange"></div>
+                <div class="designation__text">Выход в нижнюю сетку плэйофф</div>
+            </div>
+            <div class="designation__el">
+                <div class="designation__circle red"></div>
+                <div class="designation__text">Вылет с турнира</div>
+            </div>
+        </div>
+        <div class="groups">
+            <div class="groups__group groups__group--a">
+                <div class="groups__header">
+                    <div class="groups__name">
+                        Группа А
+                    </div>
+                    <div class="groups__symbols">
+                        <span>М</span>
+                        <span>Н</span>
+                        <span>В</span>
+                        <span>П</span>
+                        <span>О</span>
+                        <span>Р</span>
+                    </div>
+                </div>
+                <div class="groups__content">
+
+                </div>
+            </div>
+            <div class="groups__group groups__group--b">
+                <div class="groups__header">
+                    <div class="groups__name">
+                        Группа B
+                    </div>
+                    <div class="groups__symbols">
+                        <span>М</span>
+                        <span>Н</span>
+                        <span>В</span>
+                        <span>П</span>
+                        <span>О</span>
+                        <span>Р</span>
+                    </div>
+                </div>
+                <div class="groups__content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="./js/jquery-3.1.0.min.js"></script>
+<script src="./js/jquery.mask.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/interface/prune.js"></script>
+<script src="./js/interface/project.js"></script>
+<script src="./js/interface/validate.js"></script>
+<script src="./js/api/quiz.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/keyboard.js"></script>
+</body>
+</html>

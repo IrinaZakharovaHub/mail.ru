@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+body {
+  height: 100%;
+  font-family: 'Montserrat-Regular', sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-size: 16px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+}
+.grid {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grid__tabs {
+  display: flex;
+}
+.grid__tab {
+  padding: 16px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.54);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.grid__tab:hover {
+  background: rgba(211, 84, 0, 0.15);
+}
+.grid__tab.active {
+  background: #FF6F23;
+  color: #fff;
+}
+.grid__subtabs {
+  display: flex;
+  width: 100%;
+  background: #F2F3F7;
+}
+.grid__subtab {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+.grid__subtab:hover {
+  text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
+.grid__subtab.active {
+  border-bottom: 2px solid #FF6F23;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+}
+.designation {
+  display: flex;
+}
+.designation__el {
+  padding: 16px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+  display: flex;
+}
+.designation__text {
+  flex-shrink: 20;
+}
+.designation__circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.groups {
+  display: flex;
+}
+.groups__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-top: 3px solid #F2F3F7;
+}
+.groups__row {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-top: 3px solid #F2F3F7;
+}
+.groups__row:nth-child(1) .groups__place {
+  background: #28C281;
+}
+.groups__row:nth-child(2) .groups__place {
+  background: #FF6F23;
+}
+.groups__row:nth-child(3) .groups__place {
+  background: #D30000;
+}
+.groups__logo {
+  margin: 0 8px 0 32px;
+  width: 24px;
+  height: 24px;
+}
+.groups__content {
+  min-height: 200px;
+}
+.groups__ratings {
+  display: flex;
+}
+.groups__group {
+  width: 50%;
+}
+.groups__ratings {
+  padding: 4px;
+  margin-left: auto;
+  width: 66%;
+  display: flex;
+  justify-content: space-between;
+}
+.groups__rating {
+  width: 40px;
+  text-align: center;
+}
+.groups__symbols {
+  padding: 4px ;
+  width: 66%;
+  background: #F2F3F7;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.groups__symbols span {
+  width: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #353B48;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+}
+.groups__place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #fff;
+}
+.green {
+  background: #28C281;
+}
+.orange {
+  background: #FF6F23;
+}
+.red {
+  background: #D30000;
+}
+@media all and (max-width: 1200px) {
+  .groups {
+    flex-flow: column nowrap;
+  }
+  .groups__group {
+    width: 100%;
+  }
+}
+@media all and (max-width: 640px) {
+  .grid__tabs {
+    flex-flow: column;
+  }
+  .grid__subtabs {
+    flex-flow: column;
+  }
+  .designation {
+    flex-flow: column;
+  }
+  .groups__header {
+    padding: 16px 4px;
+    background: #f3f4f7;
+  }
+  .groups__symbols {
+    padding: 0;
+    width: 180px;
+    background: none;
+  }
+  .groups__symbols span {
+    width: 30px;
+  }
+  .groups__row {
+    padding: 16px 4px;
+  }
+  .groups__row:nth-child(1) .groups__place,
+  .groups__row:nth-child(2) .groups__place,
+  .groups__row:nth-child(3) .groups__place {
+    background: none;
+  }
+  .groups__ratings {
+    padding: 0;
+    width: 180px;
+  }
+  .groups__rating {
+    width: 30px;
+  }
+  .groups__logo {
+    margin: 0 8px 0 8px;
+    width: 15px;
+    height: 15px;
+  }
+  .groups__place {
+    width: auto;
+    height: auto;
+    background: none;
+    color: #000;
+  }
+}
+/*# sourceMappingURL=main.css.map */

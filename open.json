@@ -1,0 +1,43 @@
+{
+    "a": [
+      {
+        "name": "Cascade",
+        "place": "1",
+        "rating": ["8", "5", "3", "0", "13", "13-3"],
+        "logo": "cascade.png"
+      },
+      {
+        "name": "VirtusPro",
+        "place": "2",
+        "rating": ["8", "6", "1", "1", "11", "13-3"],
+        "logo": "virtus.png"
+      },
+      {
+        "name": "Winstrike",
+        "place": "3",
+        "rating": ["8", "4", "3", "1", "11", "11-5"],
+        "logo": "winstrikeg.png"
+      }
+
+    ],
+    "b": [
+      {
+        "name": "Evil Genius",
+        "place": "12",
+        "rating": ["8", "5", "3", "0", "13", "13-3"],
+        "logo": "genius.png"
+      },
+      {
+        "name": "The Pango",
+        "place": "2",
+        "rating": ["8", "6", "1", "1", "11", "13-3"],
+        "logo": "pango.png"
+      },
+      {
+        "name": "Team Liquid",
+        "place": "3",
+        "rating": ["8", "4", "3", "1", "11", "11-5"],
+        "logo": "liquid.png"
+      }
+    ]
+}

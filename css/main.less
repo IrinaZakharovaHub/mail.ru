@@ -1,0 +1,267 @@
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@regular: 'Montserrat-Regular', sans-serif;
+@semiBold: 'Montserrat-SemiBold', sans-serif;
+@bold: 'Montserrat-Bold', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  height: 100%;
+  font-family: @regular;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-size: 16px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-family: @semiBold;
+}
+
+.grid {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  &__tabs {
+    display: flex;
+  }
+  &__tab {
+    padding: 16px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(211, 84, 0, 0.15);
+    }
+    &.active {
+      background: #FF6F23;
+      color: #fff;
+    }
+  }
+  &__subtabs {
+    display: flex;
+    width: 100%;
+    background: #F2F3F7;
+  }
+  &__subtab {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    cursor: pointer;
+    &:hover {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+      //padding: 20px 14px;
+    }
+    &.active {
+      border-bottom: 2px solid #FF6F23;
+      font-family: @semiBold;
+    }
+
+  }
+}
+
+.designation {
+  display: flex;
+  &__el {
+    padding: 16px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.54);
+    display: flex;
+  }
+  &__text {
+    flex-shrink: 20;
+  }
+
+  &__circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+}
+
+.groups {
+  display: flex;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 3px solid #F2F3F7;
+  }
+  &__row {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-top: 3px solid #F2F3F7;
+    &:nth-child(1) {
+      .groups__place {
+        background: #28C281;
+      }
+    }
+    &:nth-child(2) {
+      .groups__place {
+        background: #FF6F23;
+      }
+    }
+    &:nth-child(3) {
+      .groups__place {
+        background: #D30000;
+      }
+    }
+  }
+  &__logo {
+    margin: 0 8px 0 32px;
+    width: 24px;
+    height: 24px;
+  }
+  &__content {
+    min-height: 200px;
+  }
+  &__ratings {
+    display: flex;
+  }
+  &__group {
+    width: 50%;
+  }
+  &__ratings {
+    padding: 4px;
+    margin-left: auto;
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__rating {
+    width: 40px;
+    text-align: center;
+  }
+  &__symbols {
+    padding: 4px ;
+    width: 66%;
+    background: #F2F3F7;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    span {
+      width: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #353B48;
+      font-family: @semiBold;
+    }
+  }
+  &__place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.green {
+  background: #28C281;
+}
+.orange {
+  background: #FF6F23;
+}
+.red {
+  background: #D30000;
+}
+
+@media all and (max-width: 1200px) {
+  .groups {
+    flex-flow: column nowrap;
+    &__group {
+      width: 100%;
+    }
+  }
+}
+@media all and (max-width: 640px) {
+  .grid {
+    &__tabs {
+      flex-flow: column;
+    }
+    &__subtabs {
+      flex-flow: column;
+    }
+  }
+  .designation {
+    flex-flow: column;
+  }
+  .groups {
+    &__header {
+      padding: 16px 4px;
+      background: #f3f4f7;
+    }
+    &__symbols {
+      padding: 0;
+      width: 180px;
+      background: none;
+      span {
+        width: 30px;
+      }
+    }
+    &__row {
+      padding: 16px 4px;
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        .groups__place {
+          background: none;
+        }
+      }
+
+    }
+    &__ratings {
+      padding: 0;
+      width: 180px;
+    }
+    &__rating {
+      width: 30px;
+    }
+    &__logo {
+      margin: 0 8px 0 8px;
+      width: 15px;
+      height: 15px;
+    }
+    &__place {
+      width: auto;
+      height: auto;
+      background: none;
+      color: #000;
+    }
+  }
+}
